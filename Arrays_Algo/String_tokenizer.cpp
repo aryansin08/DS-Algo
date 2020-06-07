@@ -6,6 +6,9 @@ char *mystrtok(char *str, char delim)	{
 	if(str!=NULL)	{
 		input=str;
 	}
+	if(input==NULL)
+		return NULL;
+		
 	char *output = new char[strlen(input)+1];
 	int i=0;
 	for(;input[i]!='\0';i++)	{
@@ -22,8 +25,6 @@ char *mystrtok(char *str, char delim)	{
 		output='\0';
 		input=NULL;
 		return output;
-	if(input==NULL)
-		return NULL;
 }
 
 int main()	{

@@ -3,11 +3,10 @@ using namespace std;
 void rotate(int a[][4], int m, int n)	{
 	int i, j;
 	//Reverse Row elements
-	for(int k = 0;k<m;k++)	{
-		for(i=0, j=n-1;(i<j);i++, j--)
-			swap(a[k][i], a[k][j]);
-		}
-	
+	for(int i=0;i<n;i++)	{
+		for(int j=0;j<n/2;j++)
+			swap(a[i][j], a[i][n-j-1]);
+	}
 		
 	//Transpose	
 	for(i = 0;i<m;i++)	{

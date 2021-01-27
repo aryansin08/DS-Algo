@@ -2,12 +2,12 @@
 using namespace std;
 //Kadane's Algo
 int kadane(int a[], int n)	{
-	int maxSum = 0, cumSum = 0;
+	int maxSum = INT_MIN, cumSum = 0;
 	for(int i=0;i<n;i++)	{
 		cumSum = cumSum+a[i];
+		maxSum = max(maxSum, cumSum);
 		if(cumSum<0)
 			cumSum = 0;
-		maxSum = max(maxSum, cumSum);
 	}
 	return maxSum;
 }

@@ -4,6 +4,8 @@ using namespace std;
 
 vector<vector<int>> dp(6, vector<int>(11));
 
+//Count the number of subsets of an array whose sum is equal to the target sum
+
 int countSubsetSum(vector<int> arr, int sum)	{
 	for(int i=1;i<dp.size();i++)	{
 		for(int j=1;j<dp[0].size();j++)	{

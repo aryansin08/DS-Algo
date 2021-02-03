@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 
+//replace bit of n ranging from i(LSB) to j(MSB) with m 
 using namespace std;
 int clearBits(int n,int i,int j)	{
 	int ones = ~0;

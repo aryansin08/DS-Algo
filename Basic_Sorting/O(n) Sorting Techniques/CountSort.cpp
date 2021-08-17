@@ -27,11 +27,11 @@ void CountSort(int a[], int n)	{
 			max = a[i];
 	}
 
-	count = new int[max+1];
+	count = new int[max+1]{0};
 
-	for(int i=0;i<=max;i++)	{
-		count[i] = 0;
-	}
+	// for(int i=0;i<=max;i++)	{
+	// 	count[i] = 0;
+	// }
 
 	for(int i=0;i<n;i++)	{
 	++count[a[i]];
